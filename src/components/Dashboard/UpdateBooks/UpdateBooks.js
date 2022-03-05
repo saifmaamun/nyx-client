@@ -1,6 +1,7 @@
 import { Box, Button, Container } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import './UpdateBooks.css'
 
 const UpdateBooks = () => {
     const [book, setBook] = useState([]);
@@ -105,12 +106,12 @@ const UpdateBooks = () => {
                     <h1>Update <span style={{color:"red"}}>{book.name}</span></h1>
 
                     <form onSubmit={handleUpdateBook}>
-                        <input type="text" onChange={handleNameChange} value={book.name || ''} />
-                        <input type="text" onChange={handleWriterChange} value={book.writer || ''} />
-                        <input type="text" onChange={handleDescriptionChange} value={book.hints || ''} />
-                        <input type="text" onChange={handleImageChange} value={book.img || ''} />
-                        <input type="number" onChange={handlePriceChange} value={book.price || ''} />
-                        <input type="submit" value="Update" />
+                        <input className="form-input" type="text" onChange={handleNameChange} value={book.name || ''} /> <br />
+                        <input className="form-input" type="text" onChange={handleWriterChange} value={book.writer || ''} /> <br />
+                        <input className="form-input"  type="text" onChange={handleDescriptionChange} value={book.hints || ''} /> <br />
+                        <input className="form-input" type="text" onChange={handleImageChange} value={book.img || ''} /> <br />
+                        <input className="form-input" type="number" onChange={handlePriceChange} value={book.price || ''} /> <br />
+                        <Button><input style={buttonStyle} type="submit" value="Update" /></Button>
                     </form>
                 </Box>
             </Container>
