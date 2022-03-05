@@ -55,7 +55,7 @@ const AllBooks = () => {
     return (
         <Container>
             <Typography variant="h3" sx={{ my: 5, fontWeight: 600 }}>
-                All Products
+                All Books
             </Typography>
             <TableContainer component={Paper}>
                 <Table style={allProducts} sx={{ minWidth: 650 }} aria-label="simple table">
