@@ -8,7 +8,7 @@ const UpdateBooks = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/books/${id}`)
+        fetch(`https://intense-garden-92996.herokuapp.com/books/${id}`)
             .then(res => res.json())
             .then(data => setBook(data))
     }, []);
@@ -50,7 +50,7 @@ const UpdateBooks = () => {
 
 
     const handleUpdateBook = e => {
-        const url = `http://localhost:5000/books/${id}`;
+        const url = `https://intense-garden-92996.herokuapp.com/books/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

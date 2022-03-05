@@ -12,7 +12,7 @@ const AddBooks = () => {
 
     const onSubmit = data => {
 
-        axios.post('http://localhost:5000/books', data)
+        axios.post('https://intense-garden-92996.herokuapp.com/books', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added Successfully')

@@ -6,14 +6,14 @@ const AllBooks = () => {
     const [books, setBooks] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {
-        fetch('http://localhost:5000/books')
+        fetch('https://intense-garden-92996.herokuapp.com/books')
             .then(res => res.json())
             .then(data => setBooks(data))
     }, [books]);
 
     const handleDelete = id => {
         console.log(id)
-        const url = `http://localhost:5000/books/${id}`
+        const url = `https://intense-garden-92996.herokuapp.com/books/${id}`
         fetch(url, {
             method: 'DELETE'
         })
